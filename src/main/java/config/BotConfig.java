@@ -1,3 +1,5 @@
+package config;
+
 import com.sun.javafx.beans.IDProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -6,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigInteger;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,5 +22,5 @@ public class BotConfig {
 
     private String accessToken;
 
-
+    private List<Command> commands;
 }
