@@ -28,4 +28,6 @@ public class ChatConfig {
     @NonNull
     @Field(targetType = FieldType.STRING)
     private BotState botState;
+
+    private String city;
 }

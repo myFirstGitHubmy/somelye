@@ -1,5 +1,5 @@
 package enums;
 
 public enum MainCommand {
-    START,HELP,NOW,CANCEL
+    START,HELP,NOW,CANCEL,SETCITY,CITY
 }

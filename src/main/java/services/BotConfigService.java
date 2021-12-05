@@ -19,4 +19,16 @@ public class BotConfigService {
     public String getBotAccessToken(){
         return botConfigRepo.findAll().get(0).getAccessToken();
     }
+
+    public String getTelegramCallbackAnswerTemp(){
+        return this.botConfigRepo.findAll().get(0).getTelegramCallbackAnswerTemp();
+    }
+
+    public String getNowApiTemp(){
+        return this.botConfigRepo.findAll().get(0).getNowWeatherApiTemp();
+    }
+
+    public String getBotUsername(){
+        return botConfigRepo.findAll().get(0).getBotName();
+    }
 }

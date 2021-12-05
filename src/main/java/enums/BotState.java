@@ -5,5 +5,7 @@ public enum BotState {
     SEARCH_NOW,
     SEARCH_PREDICT,
     NOW,
-    PREDICT
+    PREDICT,
+    SET_CITY
+
 }

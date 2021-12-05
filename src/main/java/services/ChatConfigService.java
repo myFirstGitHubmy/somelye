@@ -8,7 +8,7 @@ import repo.ChatConfigRepo;
 
 @Service
 public class ChatConfigService {
-    @Autowired
+
     private ChatConfigRepo chatConfigRepo;
 
     public boolean isChatInit(Long chatId){
@@ -31,5 +31,15 @@ public class ChatConfigService {
 
     public BotState getBotState(Long chatId){
        return chatConfigRepo.findAllByChatId(chatId).getBotState();
+    }
+
+    public void setCity(Long chatId,String city){
+        ChatConfig chatConfig = chatConfigRepo.findAllByChatId(chatId);
+        chatConfig.setCity(city);
+        chatConfigRepo.save(chatConfig);
+    }
+
+    public String getCity(Long chatId){
+        return chatConfigRepo.findAllByChatId(chatId).getCity();
     }
 }
